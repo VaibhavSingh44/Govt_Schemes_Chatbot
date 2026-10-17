@@ -42,7 +42,7 @@ def main():
     index.add(vectors)
 
     os.makedirs(
-        "../vector_store",
+        curr_dir / "vector_store",
         exist_ok=True
     )
 
@@ -58,16 +58,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-"""
--->> expected o/p
-
-Number of vectors: 20
-Vector dimension: 2048
-
-FAISS index created successfully!
-Index: ../vector_store/index.faiss
-Vectors stored: 20
-
-"""

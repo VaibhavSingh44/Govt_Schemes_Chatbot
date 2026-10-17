@@ -36,7 +36,7 @@ def create_embedding(text):
         contents = text
     )
 
-    return response.data[0].values
+    return response.embeddings[0].values  
 
 
 def main():
@@ -78,19 +78,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-# Expected output:
-
-# Processing document...
-# Total chunks: 20
-
-# Embedding chunk 1/20...
-# Embedding chunk 2/20...
-# Embedding chunk 3/20...
-# ...
-# Embedding chunk 20/20...
-
-# Embedding pipeline completed!
-# Saved: ../vector_store/chunks.json
